@@ -1,0 +1,9 @@
+date,description,merchant,category,amount,type,payment_method,notes
+2026-01-01,Salary,Company,Income,15000000,income,bank_transfer,
+2026-01-02,Grab ride,Grab,Transport,120000,expense,card,
+2026-01-03,Coffee,Highlands,Food,45000,expense,cash,
+2026-01-05,Rent,Landlord,Rent,3000000,expense,bank_transfer,
+2026-02-01,Salary,Company,Income,15000000,income,bank_transfer,
+2026-02-02,Grocery,WinMart,Food,800000,expense,card,
+2026-02-10,Movie,CGV,Entertainment,200000,expense,card,
+2026-02-15,Grab ride,Grab,Transport,150000,expense,card,

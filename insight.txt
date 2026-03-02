@@ -1,0 +1,157 @@
+
+
+
+===== OVERALL KPI =====
+Total income : 45,000,000
+Total expense: 33,831,734
+Saving       : 11,168,266
+Saving rate  : 24.82%
+
+Saving rate ~25% cho thấy mức tiết kiệm tương đối ổn, có thể tương đối thực tế với 1 người trẻ tuổi, nhưng chưa thực sự mạnh nếu mục tiêu là xây dựng quỹ dự phòng cho tương lai.
+
+
+===== MONTHLY SUMMARY =====
+           income   expense   saving  saving_rate  expense_mom_change  expense_mom_pct
+month
+2026-01  15000000  11399027  3600973     0.240065                 NaN         0.000000
+2026-02  15000000  10825015  4174985     0.278332           -574012.0        -0.050356
+2026-03  15000000  11607692  3392308     0.226154            782677.0         0.072303
+
+
+Tháng 2 có hiệu suất tài chính tốt nhất
+→ Expense giảm 574k
+→ Saving rate đạt đỉnh 27.8%
+
+Tháng 3 expense tăng 7.2%
+→ Saving rate giảm còn 22.6%
+
+Nguyên nhân chính tăng chi phí tháng 3:
+
+Food tăng gần 490k
+
+Shopping tăng 480k (đột biến)
+
+Transport tăng
+
+=> Không phải rent hay utilities (fixed cost không đổi)
+
+
+
+
+===== EXPENSE BY CATEGORY (GROUPED) =====
+category_group
+Food             13244497
+Rent              9000000
+Entertainment     3471942
+Transport         3115591
+Utilities         2509232
+Coffee            1110028
+Health             900000
+Shopping           480444
+Name: amount, dtype: int64
+
+Top category share (%):
+category_group
+Food             39.15%
+Rent              26.6%
+Entertainment    10.26%
+Transport         9.21%
+Utilities         7.42%
+Coffee            3.28%
+Health            2.66%
+Shopping          1.42%
+Name: amount, dtype: str
+
+
+
+Food là category lớn nhất, vượt cả Rent.
+
+Điều này khá đặc biệt.
+
+Vì: Rent thường là chi phí lớn nhất, nhưng ở đây Food chiếm gần 40%
+
+Điều đó cho thấy: Chi tiêu ăn uống (đặc biệt ăn ngoài) là driver chính của expense.
+
+
+
+
+
+
+
+
+
+
+===== FIXED vs VARIABLE =====
+cost_type
+Variable    21422502
+Fixed       12409232
+Name: amount, dtype: int64
+
+Fixed/Variable share (%):
+cost_type
+Variable    63.32%
+Fixed       36.68%
+Name: amount, dtype: str
+
+
+
+Phần lớn chi tiêu là biến đổi (63%), nghĩa là có khả năng tối ưu cao nếu kiểm soát hành vi tiêu dùng.
+
+
+
+===== WEEKEND vs WEEKDAY (DAILY EXPENSE) =====
+                     mean    median       sum  count
+is_weekend
+False       389450.984375  210676.0  24924863     64
+True        342571.961538  347520.0   8906871     26
+
+
+Điều thú vị:
+
+Trung bình ngày thường tiêu nhiều hơn cuối tuần.
+
+Lý do:
+
+Đi làm → commute + ăn ngoài nhiều hơn
+
+Weekend ở nhà nhiều hơn
+
+
+
+===== EXPENSE BY MERCHANT (Top 15) =====
+merchant
+Landlord            9000000
+Grab                2650591
+Local Restaurant    2198949
+Phuc Long           2087398
+Highlands           1978551
+CGV                 1573865
+Utility Provider    1459232
+Canteen             1407626
+ShopeeFood          1400804
+Local Market        1020003
+WinMart             1015773
+GrabFood            1001628
+Karaoke              902257
+Gym                  900000
+Co.opmart            857734
+Name: amount, dtype: int64
+
+
+Grab và các chuỗi cafe nằm trong top merchant, cho thấy chi tiêu tiện lợi và lifestyle chiếm tỷ trọng lớn.
+
+
+
+
+
+===== CATEGORY MoM CHANGE (latest month vs previous) =====
+category_group
+Food             489920.0
+Shopping         480444.0
+Transport        139474.0
+Utilities        103792.0
+Health                0.0
+Rent                  0.0
+Coffee           -40014.0
+Entertainment   -390939.0
+Name: 2026-03, dtype: float64
